@@ -109,6 +109,7 @@ sub Execute {
     my $load = getLoad();
     $sql =~ s/zmSystemLoad/$load/g;
   }
+  $sql =~ s/\n/ /g;
 
   Debug("Filter::Execute SQL ($sql)");
   my $sth = $ZoneMinder::Database::dbh->prepare_cached($sql)
