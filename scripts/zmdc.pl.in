@@ -326,6 +326,7 @@ sub run {
 
         next if !$message;
 
+        chomp $message;
         my ( $command, $daemon, @args ) = split(';', $message);
 
         if ( $command eq 'start' ) {
