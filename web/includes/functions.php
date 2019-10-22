@@ -495,7 +495,6 @@ function htmlOptions($contents, $values) {
 
       if ( isset($option['disabled']) ) {
         $disabled = $option['disabled'];
-        ZM\Error("Setting to disabled");
       }
     } else if ( is_object($option) ) {
       $text = $option->Name();
